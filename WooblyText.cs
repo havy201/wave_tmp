@@ -21,7 +21,7 @@ public class WooblyText : MonoBehaviour
             for (int j = 0; j < 4; j++)
             {
                 var orig = verts[charInfo.vertexIndex + j];
-                verts[charInfo.vertexIndex + j] = orig + new Vector3(0, Mathf.Sin(Time.time * 10f + 0) * 10f, 0); //Time.time*___f: thay đổi tốc độ nhanh chậm + orig.x*___f: thay đổi khoảng cách giữa các chữ
+                verts[charInfo.vertexIndex + j] = orig + new Vector3(0, Mathf.Sin(Time.time * 10f + orig.x * 0.01f) * 10f, 0); //Time.time*___f: thay đổi tốc độ nhanh chậm + orig.x*___f: thay đổi khoảng cách giữa các chữ
             }
         }
         for (int i = 0; i < textInfo.meshInfo.Length; i++)
